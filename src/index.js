@@ -428,7 +428,7 @@ function SVGIcons2SVGFontStream(options) {
         if (!glyphSet[unicode]) {
           glyphTags.push(glyphSet[unicode] = [unicode, '<glyph unicode="' + unicode + '" glyph-name="' + glyph.name + '" horiz-adv-x="' + glyph.width + '" d="' + d + '" />\n']);
         }else{
-          console.error('Ligature ' + unicode + ' already in use');
+          throw new Error('Ligature \'' + unicode + '\' is already being used');
         }
       });
     });

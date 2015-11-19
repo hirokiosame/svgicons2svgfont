@@ -41,7 +41,9 @@ function getMetadataService(options) {
     }
 
     // If already used
-    if (usedUnicodes[ligature]) { console.log(ligature, 'is already being used by', usedUnicodes[ligature]); return; }
+    if (usedUnicodes[ligature]) {
+      throw new Error('Ligature \'' + ligature + '\' is already being used');
+    }
 
     // Mark as occupied
     usedUnicodes[ligature] = ligature;
