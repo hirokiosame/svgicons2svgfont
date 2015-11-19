@@ -15,55 +15,55 @@ function hex2a(hexx) {
 }
 
 function getMetadataService(options) {
-	var usedUnicodes = {};
+  var usedUnicodes = {};
 
-	// Default options
-	options = options || {};
-	options.appendUnicode = !!options.appendUnicode;
-	options.startUnicode = 'number' === typeof options.startUnicode ?
-		options.startUnicode :
-		0xEA01;
-	options.log = options.log || console.log;
-	options.err = options.err || console.err;
+  // Default options
+  options = options || {};
+  options.appendUnicode = !!options.appendUnicode;
+  options.startUnicode = 'number' === typeof options.startUnicode ?
+    options.startUnicode :
+    0xEA01;
+  options.log = options.log || console.log;
+  options.err = options.err || console.err;
 
-	return function getMetadataFromFile(file, cb) {
-		var ligature = path.basename(file).replace(/\.svg$/, '');
+  return function getMetadataFromFile(file, cb) {
+    var ligature = path.basename(file).replace(/\.svg$/, '');
 
-		var metadata = {
-			path: file,
-			name: ligature,
-			unicode: []
-		};
-
-
-		if( ligature.length === 0 ){ return; }
-
-		// If there are spaces in it
-		if( ligature.match(/\s/) ){ return; }
+    var metadata = {
+      path: file,
+      name: ligature,
+      unicode: []
+    };
 
 
-		// Note: for strange fontforge IE10 bug
-		if( ligature.length === 16 ){
-			ligature = ligature.slice(0, 15);
-		}
+    if( ligature.length === 0 ){ return; }
 
-		// If already used
-		if (usedUnicodes[ligature]) { console.log(ligature, 'is already being used by', usedUnicodes[ligature]); return; }
+    // If there are spaces in it
+    if( ligature.match(/\s/) ){ return; }
 
-		// Mark as occupied
-		usedUnicodes[ligature] = ligature;
 
-		// If hex
-		if (ligature.match(/^[0-9A-Fa-f]+$/)) {
-			metadata.unicode.push(String.fromCodePoint(parseInt(ligature, 16)));
-		}else{
-			metadata.unicode.push(ligature);
-		}
+    // Note: for strange fontforge IE10 bug
+    if( ligature.length === 16 ){
+      ligature = ligature.slice(0, 15);
+    }
 
-		setImmediate(function() {
-			cb(null, metadata);
-		});
-	};
+    // If already used
+    if (usedUnicodes[ligature]) { console.log(ligature, 'is already being used by', usedUnicodes[ligature]); return; }
+
+    // Mark as occupied
+    usedUnicodes[ligature] = ligature;
+
+    // If hex
+    if (ligature.match(/^[0-9A-Fa-f]+$/)) {
+      metadata.unicode.push(String.fromCodePoint(parseInt(ligature, 16)));
+    }else{
+      metadata.unicode.push(ligature);
+    }
+
+    setImmediate(function() {
+      cb(null, metadata);
+    });
+  };
 
 }
 
