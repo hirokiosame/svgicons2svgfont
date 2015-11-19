@@ -2,17 +2,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <font id="plop" horiz-adv-x="150">
-    <font-face font-family="variablewidthicons"
-      units-per-em="150" ascent="150"
-      descent="0" />
-    <missing-glyph horiz-adv-x="0" />
-    <glyph glyph-name="arrow-left"
-      unicode="&#xE001;"
-      horiz-adv-x="150" d="M50 75L100 120L100 30z" />
-    <glyph glyph-name="arrow-right"
-      unicode="&#xE002;"
-      horiz-adv-x="150" d="M100 75L50 120L50 30z" />
-  </font>
+	<font id="plop" horiz-adv-x="150">
+		<font-face font-family="variablewidthicons"
+			units-per-em="150" ascent="150"
+			descent="0" />
+		<missing-glyph horiz-adv-x="0" />
+		<glyph glyph-name="arrow-left"
+			unicode="&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x6C;&#x65;&#x66;&#x74;"
+			horiz-adv-x="150" d="M50 75L100 120L100 30z" />
+		<glyph glyph-name="arrow-right"
+			unicode="&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x72;&#x69;&#x67;&#x68;&#x74;"
+			horiz-adv-x="150" d="M100 75L50 120L50 30z" />
+	</font>
 </defs>
 </svg>

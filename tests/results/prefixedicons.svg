@@ -2,23 +2,23 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <font id="prefixedicons" horiz-adv-x="150">
-    <font-face font-family="prefixedicons"
-      units-per-em="150" ascent="150"
-      descent="0" />
-    <missing-glyph horiz-adv-x="0" />
-    <glyph glyph-name="arrow-down"
-      unicode="&#xE008;"
-      horiz-adv-x="150" d=" M75 30L120 80L30 80z" />
-    <glyph glyph-name="arrow-left"
-      unicode="&#xE00F;"
-      horiz-adv-x="150" d=" M50 75L100 120L100 30z" />
-    <glyph glyph-name="arrow-right"
-      unicode="&#xE013;"
-      horiz-adv-x="150" d=" M100 75L50 120L50 30z" />
-    <glyph glyph-name="arrow-up"
-      unicode="&#xE014;"
-      horiz-adv-x="150" d=" M75 80L120 30L30 30z" />
-  </font>
+	<font id="prefixedicons" horiz-adv-x="150">
+		<font-face font-family="prefixedicons"
+			units-per-em="150" ascent="150"
+			descent="0" />
+		<missing-glyph horiz-adv-x="0" />
+		<glyph glyph-name="uE008-arrow-down"
+			unicode="&#x75;&#x45;&#x30;&#x30;&#x38;&#x2D;&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x64;&#x6F;&#x77;&#x6E;"
+			horiz-adv-x="150" d=" M75 30L120 80L30 80z" />
+		<glyph glyph-name="uE00F-arrow-left"
+			unicode="&#x75;&#x45;&#x30;&#x30;&#x46;&#x2D;&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x6C;&#x65;&#x66;&#x74;"
+			horiz-adv-x="150" d=" M50 75L100 120L100 30z" />
+		<glyph glyph-name="uE013-arrow-right"
+			unicode="&#x75;&#x45;&#x30;&#x31;&#x33;&#x2D;&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x72;&#x69;&#x67;&#x68;&#x74;"
+			horiz-adv-x="150" d=" M100 75L50 120L50 30z" />
+		<glyph glyph-name="uE014-arrow-up"
+			unicode="&#x75;&#x45;&#x30;&#x31;&#x34;&#x2D;&#x61;&#x72;&#x72;&#x6F;&#x77;&#x2D;&#x75;&#x70;"
+			horiz-adv-x="150" d=" M75 80L120 30L30 30z" />
+	</font>
 </defs>
 </svg>
