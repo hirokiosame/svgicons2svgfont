@@ -41,17 +41,17 @@ svgiconsdir(program.args, {
   appendUnicode: program.appendunicode,
   log: program.v ? console.log : function() {},
 })
-.pipe(svgicons2svgfont({
-  fontName: program.fontname,
-  fontId: program.fontId,
-  fixedwidth: program.fixedwidth,
-  centerhorizontally: program.centerHorizontally,
-  normalize: program.normalize,
-  height: program.height,
-  round: program.round,
-  descent: program.descent,
-  ascent: program.ascent,
-  metadata: program.metadata,
-  log: program.v ? console.log : function() {},
-}))
-.pipe(program.output ? fs.createWriteStream(program.output) : process.stdout);
+  .pipe(svgicons2svgfont({
+    fontName: program.fontname,
+    fontId: program.fontId,
+    fixedwidth: program.fixedwidth,
+    centerhorizontally: program.centerHorizontally,
+    normalize: program.normalize,
+    height: program.height,
+    round: program.round,
+    descent: program.descent,
+    ascent: program.ascent,
+    metadata: program.metadata,
+    log: program.v ? console.log : function() {},
+  }))
+  .pipe(program.output ? fs.createWriteStream(program.output) : process.stdout);
